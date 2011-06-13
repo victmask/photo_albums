@@ -1,0 +1,4 @@
+<div class="thumb">
+  <%= link_to_unless_current image_tag(photo.image_path + "/thumbs/" + photo.title, :alt => photo.title),
+                             photo %>
+</div>

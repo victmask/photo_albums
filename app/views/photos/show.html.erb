@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+
+<div class="single-photo">
+  <h1><%= @album.title  %></h1>
+
+  <%= link_to_unless_current image_tag(@photo.image_path + "/"+ @photo.title, :alt => @photo.title), @album %><br />
+  <b>Title: </b><%= @photo.title  %><br />
+  <b>Album: </b><%= @album.title  %><br />
+  <b>Photographer: </b><%= @photo.photographer.nil? ? "unknown" : @photo.photographer %><br />
+  <b>Description: </b><%= @photo.description %>
+
+</div>
+

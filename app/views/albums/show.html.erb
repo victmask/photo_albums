@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+
+
+<div id="container">
+  <h3><%= link_to '<<All Albums', albums_path %></h3>
+  <h1><%= @album.title %></h1>
+  <hr size="5" color="#d3d3d3"><br />
+  <%= will_paginate @photos %><br />
+
+  <div class="pagination">
+      <%= render :partial => @photos %>
+  </div>
+</div>

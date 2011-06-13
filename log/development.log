@@ -1,0 +1,1039 @@
+
+
+Started GET "/albums" for 127.0.0.1 at 2011-05-24 01:29:24 -0700
+  Processing by AlbumsController#index as HTML
+  [1m[36mAlbum Load (0.6ms)[0m  [1mSELECT "albums".* FROM "albums"[0m
+  [1m[35mPhoto Load (32.5ms)[0m  SELECT "photos".* FROM "photos"
+  [1m[36mPhoto Load (5.9ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE ("photos".album_id = 39)[0m
+  [1m[35mPhoto Load (14.5ms)[0m  SELECT "photos".* FROM "photos" WHERE ("photos".album_id = 40)
+Rendered photos/_photo.html.erb (13.8ms)
+Rendered albums/index.html.erb within layouts/application (97.3ms)
+Completed 200 OK in 185ms (Views: 85.0ms | ActiveRecord: 53.5ms)
+
+
+Started GET "/photos/2208" for 127.0.0.1 at 2011-05-24 01:32:27 -0700
+  Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"2208"}
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mPhoto Load (0.2ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."id" = 2208 LIMIT 1
+  [1m[36mAlbum Load (0.3ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."id" = 39 LIMIT 1[0m
+Rendered photos/show.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 37ms (Views: 11.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/albums/39" for 127.0.0.1 at 2011-05-24 01:32:29 -0700
+  Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"39"}
+  [1m[35mAlbum Load (0.2ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."id" = 39 LIMIT 1
+  [1m[36mPhoto Load (4.4ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE (album_id = 39)[0m
+Rendered photos/_photo.html.erb (44.3ms)
+Rendered albums/show.html.erb within layouts/application (47.6ms)
+Completed 200 OK in 74ms (Views: 50.7ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/albums/39?page=2" for 127.0.0.1 at 2011-05-24 01:32:31 -0700
+  Processing by AlbumsController#show as HTML
+  Parameters: {"page"=>"2", "id"=>"39"}
+  [1m[35mAlbum Load (0.3ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."id" = 39 LIMIT 1
+  [1m[36mPhoto Load (4.6ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE (album_id = 39)[0m
+Rendered photos/_photo.html.erb (41.4ms)
+Rendered albums/show.html.erb within layouts/application (45.0ms)
+Completed 200 OK in 74ms (Views: 47.7ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/photos/2231" for 127.0.0.1 at 2011-05-24 01:32:36 -0700
+  Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"2231"}
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."id" = 2231 LIMIT 1
+  [1m[36mAlbum Load (0.2ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."id" = 39 LIMIT 1[0m
+Rendered photos/show.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 58ms (Views: 10.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/albums/39" for 127.0.0.1 at 2011-05-24 01:32:47 -0700
+  Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"39"}
+  [1m[35mAlbum Load (0.3ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."id" = 39 LIMIT 1
+  [1m[36mPhoto Load (4.3ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE (album_id = 39)[0m
+Rendered photos/_photo.html.erb (21.1ms)
+Rendered albums/show.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 74ms (Views: 28.7ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/photos/2210" for 127.0.0.1 at 2011-05-24 01:32:49 -0700
+  Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"2210"}
+  [1m[35mPhoto Load (0.2ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."id" = 2210 LIMIT 1
+  [1m[36mAlbum Load (0.3ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."id" = 39 LIMIT 1[0m
+Rendered photos/show.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 34ms (Views: 10.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/albums/39" for 127.0.0.1 at 2011-05-24 01:33:03 -0700
+  Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"39"}
+  [1m[35mAlbum Load (0.3ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."id" = 39 LIMIT 1
+  [1m[36mPhoto Load (4.2ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE (album_id = 39)[0m
+Rendered photos/_photo.html.erb (41.0ms)
+Rendered albums/show.html.erb within layouts/application (44.4ms)
+Completed 200 OK in 75ms (Views: 47.3ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2011-05-24 01:33:10 -0700
+  Processing by AlbumsController#index as HTML
+  [1m[35mAlbum Load (0.6ms)[0m  SELECT "albums".* FROM "albums"
+  [1m[36mPhoto Load (33.1ms)[0m  [1mSELECT "photos".* FROM "photos"[0m
+  [1m[35mPhoto Load (6.7ms)[0m  SELECT "photos".* FROM "photos" WHERE ("photos".album_id = 39)
+  [1m[36mPhoto Load (30.6ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE ("photos".album_id = 40)[0m
+Rendered photos/_photo.html.erb (15.2ms)
+Rendered albums/index.html.erb within layouts/application (78.3ms)
+Completed 200 OK in 132ms (Views: 43.8ms | ActiveRecord: 71.0ms)
+
+
+Started GET "/photos/2206" for 127.0.0.1 at 2011-05-24 01:33:14 -0700
+  Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"2206"}
+  [1m[35mPhoto Load (0.2ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."id" = 2206 LIMIT 1
+  [1m[36mAlbum Load (0.2ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."id" = 39 LIMIT 1[0m
+Rendered photos/show.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 34ms (Views: 10.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/albums/39" for 127.0.0.1 at 2011-05-24 01:33:16 -0700
+  Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"39"}
+  [1m[35mAlbum Load (0.3ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."id" = 39 LIMIT 1
+  [1m[36mPhoto Load (4.4ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE (album_id = 39)[0m
+Rendered photos/_photo.html.erb (39.8ms)
+Rendered albums/show.html.erb within layouts/application (43.2ms)
+Completed 200 OK in 71ms (Views: 46.0ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/photos/2217" for 127.0.0.1 at 2011-05-24 01:33:18 -0700
+  Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"2217"}
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."id" = 2217 LIMIT 1
+  [1m[36mAlbum Load (0.3ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."id" = 39 LIMIT 1[0m
+Rendered photos/show.html.erb within layouts/application (26.6ms)
+Completed 200 OK in 56ms (Views: 29.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/albums/39" for 127.0.0.1 at 2011-05-24 01:33:19 -0700
+  Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"39"}
+  [1m[35mAlbum Load (0.2ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."id" = 39 LIMIT 1
+  [1m[36mPhoto Load (4.1ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE (album_id = 39)[0m
+Rendered photos/_photo.html.erb (41.0ms)
+Rendered albums/show.html.erb within layouts/application (44.2ms)
+Completed 200 OK in 70ms (Views: 47.0ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/photos/2214" for 127.0.0.1 at 2011-05-24 01:33:21 -0700
+  Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"2214"}
+  [1m[35mPhoto Load (0.7ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."id" = 2214 LIMIT 1
+  [1m[36mAlbum Load (0.2ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."id" = 39 LIMIT 1[0m
+Rendered photos/show.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 55ms (Views: 10.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/albums/39" for 127.0.0.1 at 2011-05-24 01:33:22 -0700
+  Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"39"}
+  [1m[35mAlbum Load (0.6ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."id" = 39 LIMIT 1
+  [1m[36mPhoto Load (4.3ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE (album_id = 39)[0m
+Rendered photos/_photo.html.erb (22.7ms)
+Rendered albums/show.html.erb within layouts/application (26.2ms)
+Completed 200 OK in 73ms (Views: 29.0ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/photos/2210" for 127.0.0.1 at 2011-05-24 01:33:23 -0700
+  Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"2210"}
+  [1m[35mPhoto Load (0.2ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."id" = 2210 LIMIT 1
+  [1m[36mAlbum Load (0.2ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."id" = 39 LIMIT 1[0m
+Rendered photos/show.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 55ms (Views: 10.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/albums/39" for 127.0.0.1 at 2011-05-24 01:33:25 -0700
+  Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"39"}
+  [1m[35mAlbum Load (0.2ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."id" = 39 LIMIT 1
+  [1m[36mPhoto Load (4.2ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE (album_id = 39)[0m
+Rendered photos/_photo.html.erb (22.8ms)
+Rendered albums/show.html.erb within layouts/application (26.1ms)
+Completed 200 OK in 73ms (Views: 28.9ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2011-05-24 01:33:26 -0700
+  Processing by AlbumsController#index as HTML
+  [1m[35mAlbum Load (0.6ms)[0m  SELECT "albums".* FROM "albums"
+  [1m[36mPhoto Load (31.7ms)[0m  [1mSELECT "photos".* FROM "photos"[0m
+  [1m[35mPhoto Load (7.3ms)[0m  SELECT "photos".* FROM "photos" WHERE ("photos".album_id = 39)
+  [1m[36mPhoto Load (30.4ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE ("photos".album_id = 40)[0m
+Rendered photos/_photo.html.erb (12.1ms)
+Rendered albums/index.html.erb within layouts/application (76.7ms)
+Completed 200 OK in 129ms (Views: 41.9ms | ActiveRecord: 69.9ms)
+
+
+Started GET "/albums?page=2" for 127.0.0.1 at 2011-05-24 01:33:39 -0700
+  Processing by AlbumsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mAlbum Load (0.6ms)[0m  SELECT "albums".* FROM "albums"
+  [1m[36mPhoto Load (13.5ms)[0m  [1mSELECT "photos".* FROM "photos"[0m
+  [1m[35mPhoto Load (25.2ms)[0m  SELECT "photos".* FROM "photos" WHERE ("photos".album_id = 39)
+  [1m[36mPhoto Load (31.3ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE ("photos".album_id = 40)[0m
+Rendered photos/_photo.html.erb (12.1ms)
+Rendered albums/index.html.erb within layouts/application (94.2ms)
+Completed 200 OK in 147ms (Views: 40.6ms | ActiveRecord: 70.6ms)
+
+
+Started GET "/albums?page=3" for 127.0.0.1 at 2011-05-24 01:33:40 -0700
+  Processing by AlbumsController#index as HTML
+  Parameters: {"page"=>"3"}
+  [1m[35mAlbum Load (0.5ms)[0m  SELECT "albums".* FROM "albums"
+  [1m[36mPhoto Load (13.4ms)[0m  [1mSELECT "photos".* FROM "photos"[0m
+  [1m[35mPhoto Load (5.8ms)[0m  SELECT "photos".* FROM "photos" WHERE ("photos".album_id = 39)
+  [1m[36mPhoto Load (29.9ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE ("photos".album_id = 40)[0m
+Rendered photos/_photo.html.erb (12.2ms)
+Rendered albums/index.html.erb within layouts/application (94.9ms)
+Completed 200 OK in 127ms (Views: 62.0ms | ActiveRecord: 49.7ms)
+
+
+Started GET "/albums?page=4" for 127.0.0.1 at 2011-05-24 01:33:42 -0700
+  Processing by AlbumsController#index as HTML
+  Parameters: {"page"=>"4"}
+  [1m[35mAlbum Load (0.5ms)[0m  SELECT "albums".* FROM "albums"
+  [1m[36mPhoto Load (13.6ms)[0m  [1mSELECT "photos".* FROM "photos"[0m
+  [1m[35mPhoto Load (5.8ms)[0m  SELECT "photos".* FROM "photos" WHERE ("photos".album_id = 39)
+  [1m[36mPhoto Load (30.7ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE ("photos".album_id = 40)[0m
+Rendered photos/_photo.html.erb (12.6ms)
+Rendered albums/index.html.erb within layouts/application (92.5ms)
+Completed 200 OK in 125ms (Views: 59.1ms | ActiveRecord: 50.6ms)
+
+
+Started GET "/albums?page=5" for 127.0.0.1 at 2011-05-24 01:33:42 -0700
+  Processing by AlbumsController#index as HTML
+  Parameters: {"page"=>"5"}
+  [1m[35mAlbum Load (0.6ms)[0m  SELECT "albums".* FROM "albums"
+  [1m[36mPhoto Load (13.8ms)[0m  [1mSELECT "photos".* FROM "photos"[0m
+  [1m[35mPhoto Load (5.9ms)[0m  SELECT "photos".* FROM "photos" WHERE ("photos".album_id = 39)
+  [1m[36mPhoto Load (31.6ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE ("photos".album_id = 40)[0m
+Rendered photos/_photo.html.erb (12.5ms)
+Rendered albums/index.html.erb within layouts/application (95.4ms)
+Completed 200 OK in 128ms (Views: 60.7ms | ActiveRecord: 51.9ms)
+
+
+Started GET "/albums?page=6" for 127.0.0.1 at 2011-05-24 01:33:43 -0700
+  Processing by AlbumsController#index as HTML
+  Parameters: {"page"=>"6"}
+  [1m[35mAlbum Load (0.5ms)[0m  SELECT "albums".* FROM "albums"
+  [1m[36mPhoto Load (13.3ms)[0m  [1mSELECT "photos".* FROM "photos"[0m
+  [1m[35mPhoto Load (5.6ms)[0m  SELECT "photos".* FROM "photos" WHERE ("photos".album_id = 39)
+  [1m[36mPhoto Load (31.4ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE ("photos".album_id = 40)[0m
+Rendered photos/_photo.html.erb (12.1ms)
+Rendered albums/index.html.erb within layouts/application (95.4ms)
+Completed 200 OK in 126ms (Views: 61.1ms | ActiveRecord: 50.9ms)
+
+
+Started GET "/albums?page=7" for 127.0.0.1 at 2011-05-24 01:33:44 -0700
+  Processing by AlbumsController#index as HTML
+  Parameters: {"page"=>"7"}
+  [1m[35mAlbum Load (0.5ms)[0m  SELECT "albums".* FROM "albums"
+  [1m[36mPhoto Load (13.1ms)[0m  [1mSELECT "photos".* FROM "photos"[0m
+  [1m[35mPhoto Load (5.8ms)[0m  SELECT "photos".* FROM "photos" WHERE ("photos".album_id = 39)
+  [1m[36mPhoto Load (29.8ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE ("photos".album_id = 40)[0m
+Rendered photos/_photo.html.erb (12.7ms)
+Rendered albums/index.html.erb within layouts/application (95.9ms)
+Completed 200 OK in 130ms (Views: 63.4ms | ActiveRecord: 49.2ms)
+
+
+Started GET "/albums?page=8" for 127.0.0.1 at 2011-05-24 01:33:45 -0700
+  Processing by AlbumsController#index as HTML
+  Parameters: {"page"=>"8"}
+  [1m[35mAlbum Load (0.5ms)[0m  SELECT "albums".* FROM "albums"
+  [1m[36mPhoto Load (13.8ms)[0m  [1mSELECT "photos".* FROM "photos"[0m
+  [1m[35mPhoto Load (5.7ms)[0m  SELECT "photos".* FROM "photos" WHERE ("photos".album_id = 39)
+  [1m[36mPhoto Load (31.7ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE ("photos".album_id = 40)[0m
+Rendered photos/_photo.html.erb (12.5ms)
+Rendered albums/index.html.erb within layouts/application (96.9ms)
+Completed 200 OK in 129ms (Views: 62.3ms | ActiveRecord: 51.7ms)
+
+
+Started GET "/albums?page=9" for 127.0.0.1 at 2011-05-24 01:33:46 -0700
+  Processing by AlbumsController#index as HTML
+  Parameters: {"page"=>"9"}
+  [1m[35mAlbum Load (0.5ms)[0m  SELECT "albums".* FROM "albums"
+  [1m[36mPhoto Load (13.6ms)[0m  [1mSELECT "photos".* FROM "photos"[0m
+  [1m[35mPhoto Load (5.7ms)[0m  SELECT "photos".* FROM "photos" WHERE ("photos".album_id = 39)
+  [1m[36mPhoto Load (29.7ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE ("photos".album_id = 40)[0m
+Rendered photos/_photo.html.erb (2.2ms)
+Rendered albums/index.html.erb within layouts/application (83.4ms)
+Completed 200 OK in 115ms (Views: 50.7ms | ActiveRecord: 49.5ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2011-06-12 15:43:02 -0700
+  Processing by AlbumsController#index as HTML
+  [1m[36mAlbum Load (14.4ms)[0m  [1mSELECT "albums".* FROM "albums"[0m
+  [1m[35mPhoto Load (27.9ms)[0m  SELECT "photos".* FROM "photos"
+  [1m[36mPhoto Load (6.1ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE ("photos".album_id = 39)[0m
+  [1m[35mPhoto Load (31.1ms)[0m  SELECT "photos".* FROM "photos" WHERE ("photos".album_id = 40)
+Rendered photos/_photo.html.erb (12.5ms)
+Rendered albums/index.html.erb within layouts/application (118.2ms)
+Completed 200 OK in 293ms (Views: 106.8ms | ActiveRecord: 79.4ms)
+
+
+Started GET "/albums/39" for 127.0.0.1 at 2011-06-12 15:45:43 -0700
+  Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"39"}
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAlbum Load (0.2ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."id" = 39 LIMIT 1
+  [1m[36mPhoto Load (6.9ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE (album_id = 39)[0m
+Rendered photos/_photo.html.erb (22.8ms)
+Rendered albums/show.html.erb within layouts/application (26.7ms)
+Completed 200 OK in 87ms (Views: 41.8ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/photos/2203" for 127.0.0.1 at 2011-06-12 15:45:49 -0700
+  Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"2203"}
+  [1m[35mPhoto Load (0.2ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."id" = 2203 LIMIT 1
+  [1m[36mAlbum Load (0.3ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."id" = 39 LIMIT 1[0m
+Rendered photos/show.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 54ms (Views: 29.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/albums/39" for 127.0.0.1 at 2011-06-12 15:46:15 -0700
+  Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"39"}
+  [1m[35mAlbum Load (0.3ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."id" = 39 LIMIT 1
+  [1m[36mPhoto Load (4.3ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE (album_id = 39)[0m
+Rendered photos/_photo.html.erb (42.9ms)
+Rendered albums/show.html.erb within layouts/application (46.9ms)
+Completed 200 OK in 76ms (Views: 49.8ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2011-06-12 15:50:25 -0700
+  Processing by AlbumsController#index as HTML
+  [1m[35mAlbum Load (0.5ms)[0m  SELECT "albums".* FROM "albums"
+  [1m[36mPhoto Load (37.7ms)[0m  [1mSELECT "photos".* FROM "photos"[0m
+  [1m[35mPhoto Load (5.6ms)[0m  SELECT "photos".* FROM "photos" WHERE ("photos".album_id = 39)
+  [1m[36mPhoto Load (13.4ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE ("photos".album_id = 40)[0m
+Rendered photos/_photo.html.erb (15.3ms)
+Rendered albums/index.html.erb within layouts/application (80.4ms)
+Completed 200 OK in 142ms (Views: 69.6ms | ActiveRecord: 57.2ms)
+
+
+Started GET "/albums/40" for 127.0.0.1 at 2011-06-12 15:50:36 -0700
+  Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[35mAlbum Load (0.2ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."id" = 40 LIMIT 1
+  [1m[36mPhoto Load (27.7ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE (album_id = 40)[0m
+Rendered photos/_photo.html.erb (21.6ms)
+Rendered albums/show.html.erb within layouts/application (25.9ms)
+Completed 200 OK in 79ms (Views: 28.8ms | ActiveRecord: 27.9ms)
+
+
+Started GET "/photos/2247" for 127.0.0.1 at 2011-06-12 15:50:38 -0700
+  Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"2247"}
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."id" = 2247 LIMIT 1
+  [1m[36mAlbum Load (0.3ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."id" = 40 LIMIT 1[0m
+Rendered photos/show.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 35ms (Views: 10.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-06-13 13:20:36 -0700
+  Processing by AlbumsController#index as HTML
+  [1m[36mAlbum Load (1.0ms)[0m  [1mSELECT "albums".* FROM "albums"[0m
+  [1m[35mPhoto Load (29.2ms)[0m  SELECT "photos".* FROM "photos"
+  [1m[36mPhoto Load (5.9ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE ("photos".album_id = 39)[0m
+  [1m[35mPhoto Load (32.3ms)[0m  SELECT "photos".* FROM "photos" WHERE ("photos".album_id = 40)
+Rendered photos/_photo.html.erb (12.8ms)
+Rendered albums/index.html.erb within layouts/application (108.2ms)
+Completed 200 OK in 233ms (Views: 74.9ms | ActiveRecord: 68.3ms)
+
+
+Started GET "/albums/39" for 127.0.0.1 at 2011-06-13 13:20:38 -0700
+  Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"39"}
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAlbum Load (0.3ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."id" = 39 LIMIT 1
+  [1m[36mPhoto Load (4.7ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE (album_id = 39)[0m
+Rendered photos/_photo.html.erb (24.2ms)
+Rendered albums/show.html.erb within layouts/application (27.6ms)
+Completed 200 OK in 76ms (Views: 30.6ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2011-06-13 13:20:40 -0700
+  Processing by AlbumsController#index as HTML
+  [1m[35mAlbum Load (0.8ms)[0m  SELECT "albums".* FROM "albums"
+  [1m[36mPhoto Load (14.2ms)[0m  [1mSELECT "photos".* FROM "photos"[0m
+  [1m[35mPhoto Load (7.8ms)[0m  SELECT "photos".* FROM "photos" WHERE ("photos".album_id = 39)
+  [1m[36mPhoto Load (31.0ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE ("photos".album_id = 40)[0m
+Rendered photos/_photo.html.erb (14.9ms)
+Rendered albums/index.html.erb within layouts/application (100.4ms)
+Completed 200 OK in 138ms (Views: 65.2ms | ActiveRecord: 53.8ms)
+
+
+Started GET "/albums/40" for 127.0.0.1 at 2011-06-13 13:20:41 -0700
+  Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[35mAlbum Load (0.3ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."id" = 40 LIMIT 1
+  [1m[36mPhoto Load (10.4ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE (album_id = 40)[0m
+Rendered photos/_photo.html.erb (21.4ms)
+Rendered albums/show.html.erb within layouts/application (25.5ms)
+Completed 200 OK in 87ms (Views: 29.1ms | ActiveRecord: 10.6ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2011-06-13 13:20:42 -0700
+  Processing by AlbumsController#index as HTML
+  [1m[35mAlbum Load (0.5ms)[0m  SELECT "albums".* FROM "albums"
+  [1m[36mPhoto Load (33.8ms)[0m  [1mSELECT "photos".* FROM "photos"[0m
+  [1m[35mPhoto Load (6.3ms)[0m  SELECT "photos".* FROM "photos" WHERE ("photos".album_id = 39)
+  [1m[36mPhoto Load (13.4ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE ("photos".album_id = 40)[0m
+Rendered photos/_photo.html.erb (12.6ms)
+Rendered albums/index.html.erb within layouts/application (82.4ms)
+Completed 200 OK in 136ms (Views: 65.6ms | ActiveRecord: 54.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-06-13 13:44:00 -0700
+  Processing by AlbumsController#index as HTML
+  [1m[35mAlbum Load (0.6ms)[0m  SELECT "albums".* FROM "albums"
+  [1m[36mPhoto Load (33.4ms)[0m  [1mSELECT "photos".* FROM "photos"[0m
+  [1m[35mPhoto Load (8.1ms)[0m  SELECT "photos".* FROM "photos" WHERE ("photos".album_id = 39)
+  [1m[36mPhoto Load (31.5ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE ("photos".album_id = 40)[0m
+Rendered photos/_photo.html.erb (13.9ms)
+Rendered albums/index.html.erb within layouts/application (81.0ms)
+Completed 200 OK in 136ms (Views: 44.4ms | ActiveRecord: 73.6ms)
+
+
+Started GET "/albums/39" for 127.0.0.1 at 2011-06-13 13:44:02 -0700
+  Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"39"}
+  [1m[35mAlbum Load (0.3ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."id" = 39 LIMIT 1
+  [1m[36mPhoto Load (4.6ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE (album_id = 39)[0m
+Rendered photos/_photo.html.erb (22.0ms)
+Rendered albums/show.html.erb within layouts/application (25.7ms)
+Completed 200 OK in 79ms (Views: 28.5ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/images" for 127.0.0.1 at 2011-06-13 13:54:54 -0700
+
+ActionController::RoutingError (No route matches "/images"):
+  
+
+Rendered /Users/victmask/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/public/images" for 127.0.0.1 at 2011-06-13 13:55:06 -0700
+
+ActionController::RoutingError (No route matches "/public/images"):
+  
+
+Rendered /Users/victmask/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-06-13 13:55:13 -0700
+  Processing by AlbumsController#index as HTML
+  [1m[35mAlbum Load (0.6ms)[0m  SELECT "albums".* FROM "albums"
+  [1m[36mPhoto Load (39.6ms)[0m  [1mSELECT "photos".* FROM "photos"[0m
+  [1m[35mPhoto Load (6.5ms)[0m  SELECT "photos".* FROM "photos" WHERE ("photos".album_id = 39)
+  [1m[36mPhoto Load (36.5ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE ("photos".album_id = 40)[0m
+Rendered photos/_photo.html.erb (12.7ms)
+Rendered albums/index.html.erb within layouts/application (87.0ms)
+Completed 200 OK in 147ms (Views: 46.9ms | ActiveRecord: 83.3ms)
+
+
+Started GET "/albums/39" for 127.0.0.1 at 2011-06-13 13:55:15 -0700
+  Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"39"}
+  [1m[35mAlbum Load (0.5ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."id" = 39 LIMIT 1
+  [1m[36mPhoto Load (4.7ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE (album_id = 39)[0m
+Rendered photos/_photo.html.erb (41.9ms)
+Rendered albums/show.html.erb within layouts/application (45.5ms)
+Completed 200 OK in 76ms (Views: 48.5ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/photos/2210" for 127.0.0.1 at 2011-06-13 13:55:18 -0700
+  Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"2210"}
+  [1m[35mPhoto Load (0.2ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."id" = 2210 LIMIT 1
+  [1m[36mAlbum Load (0.2ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."id" = 39 LIMIT 1[0m
+Rendered photos/show.html.erb within layouts/application (31.6ms)
+Completed 200 OK in 59ms (Views: 34.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/photos" for 127.0.0.1 at 2011-06-13 13:55:22 -0700
+  Processing by PhotosController#index as HTML
+  [1m[35mPhoto Load (37.0ms)[0m  SELECT "photos".* FROM "photos"
+Rendered photos/_photo.html.erb (13.9ms)
+Rendered photos/index.html.erb within layouts/application (26.9ms)
+Completed 200 OK in 77ms (Views: 30.0ms | ActiveRecord: 37.0ms)
+
+
+Started GET "/photos/2203" for 127.0.0.1 at 2011-06-13 13:55:27 -0700
+  Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"2203"}
+  [1m[36mPhoto Load (0.3ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."id" = 2203 LIMIT 1[0m
+  [1m[35mAlbum Load (0.3ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."id" = 39 LIMIT 1
+Rendered photos/show.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 64ms (Views: 14.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/albums/39" for 127.0.0.1 at 2011-06-13 13:55:28 -0700
+  Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"39"}
+  [1m[36mAlbum Load (0.3ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."id" = 39 LIMIT 1[0m
+  [1m[35mPhoto Load (4.4ms)[0m  SELECT "photos".* FROM "photos" WHERE (album_id = 39)
+Rendered photos/_photo.html.erb (22.1ms)
+Rendered albums/show.html.erb within layouts/application (25.6ms)
+Completed 200 OK in 74ms (Views: 28.5ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/albums/39" for 127.0.0.1 at 2011-06-13 13:58:01 -0700
+  Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"39"}
+  [1m[36mAlbum Load (0.6ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."id" = 39 LIMIT 1[0m
+  [1m[35mPhoto Load (4.8ms)[0m  SELECT "photos".* FROM "photos" WHERE (album_id = 39)
+Rendered photos/_photo.html.erb (46.3ms)
+Rendered albums/show.html.erb within layouts/application (50.8ms)
+Completed 200 OK in 86ms (Views: 55.5ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2011-06-13 13:58:04 -0700
+  Processing by AlbumsController#index as HTML
+  [1m[36mAlbum Load (0.5ms)[0m  [1mSELECT "albums".* FROM "albums"[0m
+  [1m[35mPhoto Load (35.0ms)[0m  SELECT "photos".* FROM "photos"
+  [1m[36mPhoto Load (23.5ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE ("photos".album_id = 39)[0m
+  [1m[35mPhoto Load (17.0ms)[0m  SELECT "photos".* FROM "photos" WHERE ("photos".album_id = 40)
+Rendered photos/_photo.html.erb (31.6ms)
+Rendered albums/index.html.erb within layouts/application (97.8ms)
+Completed 200 OK in 153ms (Views: 60.3ms | ActiveRecord: 76.0ms)
+
+
+Started GET "/albums/39" for 127.0.0.1 at 2011-06-13 13:58:05 -0700
+  Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"39"}
+  [1m[36mAlbum Load (0.2ms)[0m  [1mSELECT "albums".* FROM "albums" WHERE "albums"."id" = 39 LIMIT 1[0m
+  [1m[35mPhoto Load (4.2ms)[0m  SELECT "photos".* FROM "photos" WHERE (album_id = 39)
+Rendered photos/_photo.html.erb (45.2ms)
+Rendered albums/show.html.erb within layouts/application (48.7ms)
+Completed 200 OK in 77ms (Views: 51.7ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/photos/2207" for 127.0.0.1 at 2011-06-13 13:58:07 -0700
+  Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"2207"}
+  [1m[36mPhoto Load (0.4ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."id" = 2207 LIMIT 1[0m
+  [1m[35mAlbum Load (0.2ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."id" = 39 LIMIT 1
+Rendered photos/show.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 56ms (Views: 11.3ms | ActiveRecord: 0.6ms)
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateAlbums (20110522231535)
+Migrating to CreatePhotos (20110522231838)
+  [1m[35mSQL (0.2ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("albums")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("photos")[0m
+
+
+Started GET "/photos/2207" for 127.0.0.1 at 2011-06-13 14:01:14 -0700
+  Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"2207"}
+  [1m[36mPhoto Load (0.4ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."id" = 2207 LIMIT 1[0m
+  [1m[35mAlbum Load (0.3ms)[0m  SELECT "albums".* FROM "albums" WHERE "albums"."id" = 39 LIMIT 1
+Rendered photos/show.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 64ms (Views: 11.6ms | ActiveRecord: 0.7ms)
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreatePhotos (20110522231838)
+  [1m[35mSQL (0.0ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.6ms)[0m  [1mDROP TABLE "photos"[0m
+  [1m[35mAREL (0.1ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20110522231838'
+Migrating to CreateAlbums (20110522231535)
+  [1m[36mSQL (0.4ms)[0m  [1mDROP TABLE "albums"[0m
+  [1m[35mAREL (0.1ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20110522231535'
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Started GET "/photos/2203" for 127.0.0.1 at 2011-06-13 14:02:33 -0700
+  Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"2203"}
+Completed   in 6ms
+
+ActiveRecord::StatementInvalid (Could not find table 'photos'):
+  app/controllers/photos_controller.rb:17:in `show'
+
+Rendered /Users/victmask/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/victmask/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.7ms)
+Rendered /Users/victmask/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.6ms)
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateAlbums (20110522231535)
+  [1m[35mSQL (0.0ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE TABLE "albums" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "directory" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110522231535')
+Migrating to CreatePhotos (20110522231838)
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE TABLE "photos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "album_id" integer, "description" text, "photographer" varchar(255), "image_path" varchar(255), "image_name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110522231838')
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("albums")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("photos")[0m
+
+
+Started GET "/photos/2203" for 127.0.0.1 at 2011-06-13 14:02:41 -0700
+  Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"2203"}
+  [1m[36mPhoto Load (0.1ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."id" = 2203 LIMIT 1[0m
+Completed   in 9ms
+
+ActiveRecord::RecordNotFound (Couldn't find Photo with ID=2203):
+  app/controllers/photos_controller.rb:17:in `show'
+
+Rendered /Users/victmask/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/victmask/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+Rendered /Users/victmask/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-06-13 14:02:46 -0700
+  Processing by AlbumsController#index as HTML
+  [1m[35mAlbum Load (0.3ms)[0m  SELECT "albums".* FROM "albums"
+  [1m[36mPhoto Load (0.2ms)[0m  [1mSELECT "photos".* FROM "photos"[0m
+Rendered collection (0.0ms)
+Rendered albums/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 19ms (Views: 4.9ms | ActiveRecord: 0.6ms)
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateAlbums (20110522231535)
+Migrating to CreatePhotos (20110522231838)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("albums")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("photos")[0m
+
+
+Started GET "/" for 127.0.0.1 at 2011-06-13 14:03:13 -0700
+  Processing by AlbumsController#index as HTML
+  [1m[35mAlbum Load (0.3ms)[0m  SELECT "albums".* FROM "albums"
+  [1m[36mPhoto Load (0.1ms)[0m  [1mSELECT "photos".* FROM "photos"[0m
+Rendered collection (0.0ms)
+Rendered albums/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 21ms (Views: 5.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-06-13 14:03:25 -0700
+  Processing by AlbumsController#index as HTML
+  [1m[35mAlbum Load (0.4ms)[0m  SELECT "albums".* FROM "albums"
+  [1m[36mPhoto Load (0.2ms)[0m  [1mSELECT "photos".* FROM "photos"[0m
+Rendered collection (0.0ms)
+Rendered albums/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 21ms (Views: 5.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images" for 127.0.0.1 at 2011-06-13 14:03:29 -0700
+
+ActionController::RoutingError (No route matches "/images"):
+  
+
+Rendered /Users/victmask/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateAlbums (20110522231535)
+Migrating to CreatePhotos (20110522231838)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("albums")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("photos")[0m
+
+
+Started GET "/images" for 127.0.0.1 at 2011-06-13 14:03:51 -0700
+
+ActionController::RoutingError (No route matches "/images"):
+  
+
+Rendered /Users/victmask/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-06-13 14:03:55 -0700
+  Processing by AlbumsController#index as HTML
+  [1m[35mAlbum Load (0.4ms)[0m  SELECT "albums".* FROM "albums"
+  [1m[36mPhoto Load (0.1ms)[0m  [1mSELECT "photos".* FROM "photos"[0m
+Rendered collection (0.0ms)
+Rendered albums/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 20ms (Views: 5.0ms | ActiveRecord: 0.6ms)
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreatePhotos (20110522231838)
+  [1m[35mSQL (0.0ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.6ms)[0m  [1mDROP TABLE "photos"[0m
+  [1m[35mAREL (0.1ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20110522231838'
+Migrating to CreateAlbums (20110522231535)
+  [1m[36mSQL (0.4ms)[0m  [1mDROP TABLE "albums"[0m
+  [1m[35mAREL (0.1ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20110522231535'
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateAlbums (20110522231535)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE TABLE "albums" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "directory" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110522231535')
+Migrating to CreatePhotos (20110522231838)
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE TABLE "photos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "album_id" integer, "description" text, "photographer" varchar(255), "image_path" varchar(255), "image_name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110522231838')
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("albums")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("photos")[0m
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+DEPRECATION WARNING: RAILS_ROOT is deprecated. Please use ::Rails.root.to_s. (called from <top (required)> at /Users/victmask/RoR/photo_album/db/seeds.rb:11)
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+DEPRECATION WARNING: RAILS_ROOT is deprecated. Please use ::Rails.root.to_s. (called from <top (required)> at /Users/victmask/RoR/photo_album/db/seeds.rb:11)
+  [1m[35mAREL (0.6ms)[0m  DELETE FROM "albums" WHERE 1=1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "albums" ("title", "description", "directory", "created_at", "updated_at") VALUES ('Anna May Wong', NULL, 'anna_may_wong', '2011-06-13 21:17:30.863181', '2011-06-13 21:17:30.863181')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "albums" ("title", "description", "directory", "created_at", "updated_at") VALUES ('Louise Brooks', NULL, 'louise_brooks', '2011-06-13 21:17:30.893426', '2011-06-13 21:17:30.893426')
+  [1m[36mAlbum Load (0.3ms)[0m  [1mSELECT "albums".* FROM "albums"[0m
+  [1m[35mAREL (0.5ms)[0m  DELETE FROM "photos" WHERE 1=1
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('039_70151.jpg', 1, '039_70151.jpg: needs descriptions', NULL, 'anna_may_wong', '039_70151.jpg', '2011-06-13 21:17:30.910651', '2011-06-13 21:17:30.910651')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('1170B.jpg', 1, '1170B.jpg: needs descriptions', NULL, 'anna_may_wong', '1170B.jpg', '2011-06-13 21:17:30.917223', '2011-06-13 21:17:30.917223')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('1252B.jpg', 1, '1252B.jpg: needs descriptions', NULL, 'anna_may_wong', '1252B.jpg', '2011-06-13 21:17:30.919646', '2011-06-13 21:17:30.919646')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('1298B.jpg', 1, '1298B.jpg: needs descriptions', NULL, 'anna_may_wong', '1298B.jpg', '2011-06-13 21:17:30.921633', '2011-06-13 21:17:30.921633')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('1298S.jpg', 1, '1298S.jpg: needs descriptions', NULL, 'anna_may_wong', '1298S.jpg', '2011-06-13 21:17:30.923814', '2011-06-13 21:17:30.923814')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('1303S.jpg', 1, '1303S.jpg: needs descriptions', NULL, 'anna_may_wong', '1303S.jpg', '2011-06-13 21:17:30.926053', '2011-06-13 21:17:30.926053')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('142_wong,_anna_may_01.jpg', 1, '142_wong,_anna_may_01.jpg: needs descriptions', NULL, 'anna_may_wong', '142_wong,_anna_may_01.jpg', '2011-06-13 21:17:30.928203', '2011-06-13 21:17:30.928203')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('143708050_df90318ffc_o.jpg', 1, '143708050_df90318ffc_o.jpg: needs descriptions', NULL, 'anna_may_wong', '143708050_df90318ffc_o.jpg', '2011-06-13 21:17:30.930200', '2011-06-13 21:17:30.930200')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('143708055_55f45caebe_o.jpg', 1, '143708055_55f45caebe_o.jpg: needs descriptions', NULL, 'anna_may_wong', '143708055_55f45caebe_o.jpg', '2011-06-13 21:17:30.932201', '2011-06-13 21:17:30.932201')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('143_wong,_anna_may_03.jpg', 1, '143_wong,_anna_may_03.jpg: needs descriptions', NULL, 'anna_may_wong', '143_wong,_anna_may_03.jpg', '2011-06-13 21:17:30.934545', '2011-06-13 21:17:30.934545')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('144_wong,_anna_may_04.jpg', 1, '144_wong,_anna_may_04.jpg: needs descriptions', NULL, 'anna_may_wong', '144_wong,_anna_may_04.jpg', '2011-06-13 21:17:30.936903', '2011-06-13 21:17:30.936903')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('161.jpg', 1, '161.jpg: needs descriptions', NULL, 'anna_may_wong', '161.jpg', '2011-06-13 21:17:30.939140', '2011-06-13 21:17:30.939140')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('1960anna55.jpg', 1, '1960anna55.jpg: needs descriptions', NULL, 'anna_may_wong', '1960anna55.jpg', '2011-06-13 21:17:30.941676', '2011-06-13 21:17:30.941676')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('2635228.jpg', 1, '2635228.jpg: needs descriptions', NULL, 'anna_may_wong', '2635228.jpg', '2011-06-13 21:17:30.943825', '2011-06-13 21:17:30.943825')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('2a104d29.jpg', 1, '2a104d29.jpg: needs descriptions', NULL, 'anna_may_wong', '2a104d29.jpg', '2011-06-13 21:17:30.946756', '2011-06-13 21:17:30.946756')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('3089392.jpg', 1, '3089392.jpg: needs descriptions', NULL, 'anna_may_wong', '3089392.jpg', '2011-06-13 21:17:30.949488', '2011-06-13 21:17:30.949488')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('3119_0024.jpg', 1, '3119_0024.jpg: needs descriptions', NULL, 'anna_may_wong', '3119_0024.jpg', '2011-06-13 21:17:30.952217', '2011-06-13 21:17:30.952217')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('3119_0038.jpg', 1, '3119_0038.jpg: needs descriptions', NULL, 'anna_may_wong', '3119_0038.jpg', '2011-06-13 21:17:30.955045', '2011-06-13 21:17:30.955045')
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('3205573.jpg', 1, '3205573.jpg: needs descriptions', NULL, 'anna_may_wong', '3205573.jpg', '2011-06-13 21:17:30.957403', '2011-06-13 21:17:30.957403')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('3205579.jpg', 1, '3205579.jpg: needs descriptions', NULL, 'anna_may_wong', '3205579.jpg', '2011-06-13 21:17:30.977857', '2011-06-13 21:17:30.977857')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('3205581.jpg', 1, '3205581.jpg: needs descriptions', NULL, 'anna_may_wong', '3205581.jpg', '2011-06-13 21:17:30.980506', '2011-06-13 21:17:30.980506')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('3205582.jpg', 1, '3205582.jpg: needs descriptions', NULL, 'anna_may_wong', '3205582.jpg', '2011-06-13 21:17:30.982726', '2011-06-13 21:17:30.982726')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('3205802.jpg', 1, '3205802.jpg: needs descriptions', NULL, 'anna_may_wong', '3205802.jpg', '2011-06-13 21:17:30.985281', '2011-06-13 21:17:30.985281')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('3205805.jpg', 1, '3205805.jpg: needs descriptions', NULL, 'anna_may_wong', '3205805.jpg', '2011-06-13 21:17:30.987780', '2011-06-13 21:17:30.987780')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('3205806.jpg', 1, '3205806.jpg: needs descriptions', NULL, 'anna_may_wong', '3205806.jpg', '2011-06-13 21:17:30.990291', '2011-06-13 21:17:30.990291')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('3205810.jpg', 1, '3205810.jpg: needs descriptions', NULL, 'anna_may_wong', '3205810.jpg', '2011-06-13 21:17:30.992301', '2011-06-13 21:17:30.992301')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('3205813.jpg', 1, '3205813.jpg: needs descriptions', NULL, 'anna_may_wong', '3205813.jpg', '2011-06-13 21:17:30.994786', '2011-06-13 21:17:30.994786')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('3265042.jpg', 1, '3265042.jpg: needs descriptions', NULL, 'anna_may_wong', '3265042.jpg', '2011-06-13 21:17:30.997271', '2011-06-13 21:17:30.997271')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('3265592.jpg', 1, '3265592.jpg: needs descriptions', NULL, 'anna_may_wong', '3265592.jpg', '2011-06-13 21:17:30.999568', '2011-06-13 21:17:30.999568')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('3282769.jpg', 1, '3282769.jpg: needs descriptions', NULL, 'anna_may_wong', '3282769.jpg', '2011-06-13 21:17:31.001972', '2011-06-13 21:17:31.001972')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('3282788.jpg', 1, '3282788.jpg: needs descriptions', NULL, 'anna_may_wong', '3282788.jpg', '2011-06-13 21:17:31.004338', '2011-06-13 21:17:31.004338')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('3289987.jpg', 1, '3289987.jpg: needs descriptions', NULL, 'anna_may_wong', '3289987.jpg', '2011-06-13 21:17:31.007552', '2011-06-13 21:17:31.007552')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('3293070.jpg', 1, '3293070.jpg: needs descriptions', NULL, 'anna_may_wong', '3293070.jpg', '2011-06-13 21:17:31.010316', '2011-06-13 21:17:31.010316')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('3293072.jpg', 1, '3293072.jpg: needs descriptions', NULL, 'anna_may_wong', '3293072.jpg', '2011-06-13 21:17:31.012722', '2011-06-13 21:17:31.012722')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('3293688.jpg', 1, '3293688.jpg: needs descriptions', NULL, 'anna_may_wong', '3293688.jpg', '2011-06-13 21:17:31.015489', '2011-06-13 21:17:31.015489')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('3295432.jpg', 1, '3295432.jpg: needs descriptions', NULL, 'anna_may_wong', '3295432.jpg', '2011-06-13 21:17:31.018588', '2011-06-13 21:17:31.018588')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('3337640.jpg', 1, '3337640.jpg: needs descriptions', NULL, 'anna_may_wong', '3337640.jpg', '2011-06-13 21:17:31.020911', '2011-06-13 21:17:31.020911')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('3348647.jpg', 1, '3348647.jpg: needs descriptions', NULL, 'anna_may_wong', '3348647.jpg', '2011-06-13 21:17:31.023417', '2011-06-13 21:17:31.023417')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('3348664.jpg', 1, '3348664.jpg: needs descriptions', NULL, 'anna_may_wong', '3348664.jpg', '2011-06-13 21:17:31.025701', '2011-06-13 21:17:31.025701')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('3377765.jpg', 1, '3377765.jpg: needs descriptions', NULL, 'anna_may_wong', '3377765.jpg', '2011-06-13 21:17:31.028400', '2011-06-13 21:17:31.028400')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('3377766.jpg', 1, '3377766.jpg: needs descriptions', NULL, 'anna_may_wong', '3377766.jpg', '2011-06-13 21:17:31.030557', '2011-06-13 21:17:31.030557')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('3377767.jpg', 1, '3377767.jpg: needs descriptions', NULL, 'anna_may_wong', '3377767.jpg', '2011-06-13 21:17:31.032841', '2011-06-13 21:17:31.032841')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('3377768.jpg', 1, '3377768.jpg: needs descriptions', NULL, 'anna_may_wong', '3377768.jpg', '2011-06-13 21:17:31.035446', '2011-06-13 21:17:31.035446')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('3378167.jpg', 1, '3378167.jpg: needs descriptions', NULL, 'anna_may_wong', '3378167.jpg', '2011-06-13 21:17:31.037827', '2011-06-13 21:17:31.037827')
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('_01.jpg', 1, '_01.jpg: needs descriptions', NULL, 'anna_may_wong', '_01.jpg', '2011-06-13 21:17:31.040404', '2011-06-13 21:17:31.040404')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('5-16-26towncrier_450.jpg', 2, '5-16-26towncrier_450.jpg: needs descriptions', NULL, 'louise_brooks', '5-16-26towncrier_450.jpg', '2011-06-13 21:17:31.042832', '2011-06-13 21:17:31.042832')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('artbeauty_450.jpg', 2, 'artbeauty_450.jpg: needs descriptions', NULL, 'louise_brooks', 'artbeauty_450.jpg', '2011-06-13 21:17:31.045086', '2011-06-13 21:17:31.045086')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('athome03_450.jpg', 2, 'athome03_450.jpg: needs descriptions', NULL, 'louise_brooks', 'athome03_450.jpg', '2011-06-13 21:17:31.047201', '2011-06-13 21:17:31.047201')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('athome05_450.jpg', 2, 'athome05_450.jpg: needs descriptions', NULL, 'louise_brooks', 'athome05_450.jpg', '2011-06-13 21:17:31.049378', '2011-06-13 21:17:31.049378')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('athome07a_450.jpg', 2, 'athome07a_450.jpg: needs descriptions', NULL, 'louise_brooks', 'athome07a_450.jpg', '2011-06-13 21:17:31.051579', '2011-06-13 21:17:31.051579')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('austria01_450.jpg', 2, 'austria01_450.jpg: needs descriptions', NULL, 'louise_brooks', 'austria01_450.jpg', '2011-06-13 21:17:31.053832', '2011-06-13 21:17:31.053832')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('austria05_450.jpg', 2, 'austria05_450.jpg: needs descriptions', NULL, 'louise_brooks', 'austria05_450.jpg', '2011-06-13 21:17:31.056524', '2011-06-13 21:17:31.056524')
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('babyjane01_450.jpg', 2, 'babyjane01_450.jpg: needs descriptions', NULL, 'louise_brooks', 'babyjane01_450.jpg', '2011-06-13 21:17:31.058732', '2011-06-13 21:17:31.058732')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('beggars02_450.jpg', 2, 'beggars02_450.jpg: needs descriptions', NULL, 'louise_brooks', 'beggars02_450.jpg', '2011-06-13 21:17:31.061359', '2011-06-13 21:17:31.061359')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('beggars03_450.jpg', 2, 'beggars03_450.jpg: needs descriptions', NULL, 'louise_brooks', 'beggars03_450.jpg', '2011-06-13 21:17:31.064001', '2011-06-13 21:17:31.064001')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('beggars04_450.jpg', 2, 'beggars04_450.jpg: needs descriptions', NULL, 'louise_brooks', 'beggars04_450.jpg', '2011-06-13 21:17:31.066561', '2011-06-13 21:17:31.066561')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('beggars05_450.jpg', 2, 'beggars05_450.jpg: needs descriptions', NULL, 'louise_brooks', 'beggars05_450.jpg', '2011-06-13 21:17:31.068710', '2011-06-13 21:17:31.068710')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('beggars06_338x450.jpg', 2, 'beggars06_338x450.jpg: needs descriptions', NULL, 'louise_brooks', 'beggars06_338x450.jpg', '2011-06-13 21:17:31.071294', '2011-06-13 21:17:31.071294')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('beggars07_450.jpg', 2, 'beggars07_450.jpg: needs descriptions', NULL, 'louise_brooks', 'beggars07_450.jpg', '2011-06-13 21:17:31.073733', '2011-06-13 21:17:31.073733')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('blatt11-17-28_450.jpg', 2, 'blatt11-17-28_450.jpg: needs descriptions', NULL, 'louise_brooks', 'blatt11-17-28_450.jpg', '2011-06-13 21:17:31.075964', '2011-06-13 21:17:31.075964')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('bluenude_450.jpg', 2, 'bluenude_450.jpg: needs descriptions', NULL, 'louise_brooks', 'bluenude_450.jpg', '2011-06-13 21:17:31.078296', '2011-06-13 21:17:31.078296')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('bride_450.jpg', 2, 'bride_450.jpg: needs descriptions', NULL, 'louise_brooks', 'bride_450.jpg', '2011-06-13 21:17:31.080833', '2011-06-13 21:17:31.080833')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('canary02_364x450.jpg', 2, 'canary02_364x450.jpg: needs descriptions', NULL, 'louise_brooks', 'canary02_364x450.jpg', '2011-06-13 21:17:31.083397', '2011-06-13 21:17:31.083397')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('canary03_450.jpg', 2, 'canary03_450.jpg: needs descriptions', NULL, 'louise_brooks', 'canary03_450.jpg', '2011-06-13 21:17:31.086069', '2011-06-13 21:17:31.086069')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('canary04_450.jpg', 2, 'canary04_450.jpg: needs descriptions', NULL, 'louise_brooks', 'canary04_450.jpg', '2011-06-13 21:17:31.088685', '2011-06-13 21:17:31.088685')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('canary05_450.jpg', 2, 'canary05_450.jpg: needs descriptions', NULL, 'louise_brooks', 'canary05_450.jpg', '2011-06-13 21:17:31.091330', '2011-06-13 21:17:31.091330')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('canary06_450.jpg', 2, 'canary06_450.jpg: needs descriptions', NULL, 'louise_brooks', 'canary06_450.jpg', '2011-06-13 21:17:31.093778', '2011-06-13 21:17:31.093778')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('canary07_450.jpg', 2, 'canary07_450.jpg: needs descriptions', NULL, 'louise_brooks', 'canary07_450.jpg', '2011-06-13 21:17:31.097240', '2011-06-13 21:17:31.097240')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('canary11_450.jpg', 2, 'canary11_450.jpg: needs descriptions', NULL, 'louise_brooks', 'canary11_450.jpg', '2011-06-13 21:17:31.099964', '2011-06-13 21:17:31.099964')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('canary13_450.jpg', 2, 'canary13_450.jpg: needs descriptions', NULL, 'louise_brooks', 'canary13_450.jpg', '2011-06-13 21:17:31.102378', '2011-06-13 21:17:31.102378')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('canary16_450.jpg', 2, 'canary16_450.jpg: needs descriptions', NULL, 'louise_brooks', 'canary16_450.jpg', '2011-06-13 21:17:31.104560', '2011-06-13 21:17:31.104560')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('cinearte7-26_450.jpg', 2, 'cinearte7-26_450.jpg: needs descriptions', NULL, 'louise_brooks', 'cinearte7-26_450.jpg', '2011-06-13 21:17:31.107818', '2011-06-13 21:17:31.107818')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('couch_450.jpg', 2, 'couch_450.jpg: needs descriptions', NULL, 'louise_brooks', 'couch_450.jpg', '2011-06-13 21:17:31.110071', '2011-06-13 21:17:31.110071')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('dafile_450.jpg', 2, 'dafile_450.jpg: needs descriptions', NULL, 'louise_brooks', 'dafile_450.jpg', '2011-06-13 21:17:31.112658', '2011-06-13 21:17:31.112658')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('danish_450.jpg', 2, 'danish_450.jpg: needs descriptions', NULL, 'louise_brooks', 'danish_450.jpg', '2011-06-13 21:17:31.114959', '2011-06-13 21:17:31.114959')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('deco01_450.jpg', 2, 'deco01_450.jpg: needs descriptions', NULL, 'louise_brooks', 'deco01_450.jpg', '2011-06-13 21:17:31.117726', '2011-06-13 21:17:31.117726')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('deco02_450.jpg', 2, 'deco02_450.jpg: needs descriptions', NULL, 'louise_brooks', 'deco02_450.jpg', '2011-06-13 21:17:31.120584', '2011-06-13 21:17:31.120584')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('deco03_450.jpg', 2, 'deco03_450.jpg: needs descriptions', NULL, 'louise_brooks', 'deco03_450.jpg', '2011-06-13 21:17:31.123859', '2011-06-13 21:17:31.123859')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('elegant2_450.jpg', 2, 'elegant2_450.jpg: needs descriptions', NULL, 'louise_brooks', 'elegant2_450.jpg', '2011-06-13 21:17:31.126520', '2011-06-13 21:17:31.126520')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('elegant_lulu_450.jpg', 2, 'elegant_lulu_450.jpg: needs descriptions', NULL, 'louise_brooks', 'elegant_lulu_450.jpg', '2011-06-13 21:17:31.129055', '2011-06-13 21:17:31.129055')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('european09_298x450.jpg', 2, 'european09_298x450.jpg: needs descriptions', NULL, 'louise_brooks', 'european09_298x450.jpg', '2011-06-13 21:17:31.131271', '2011-06-13 21:17:31.131271')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('fama1928_450.jpg', 2, 'fama1928_450.jpg: needs descriptions', NULL, 'louise_brooks', 'fama1928_450.jpg', '2011-06-13 21:17:31.133639', '2011-06-13 21:17:31.133639')
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('fashion04_450.jpg', 2, 'fashion04_450.jpg: needs descriptions', NULL, 'louise_brooks', 'fashion04_450.jpg', '2011-06-13 21:17:31.135944', '2011-06-13 21:17:31.135944')[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('fashion08_450.jpg', 2, 'fashion08_450.jpg: needs descriptions', NULL, 'louise_brooks', 'fashion08_450.jpg', '2011-06-13 21:17:31.138978', '2011-06-13 21:17:31.138978')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('fashion09_450.jpg', 2, 'fashion09_450.jpg: needs descriptions', NULL, 'louise_brooks', 'fashion09_450.jpg', '2011-06-13 21:17:31.142025', '2011-06-13 21:17:31.142025')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('fashion17_450.jpg', 2, 'fashion17_450.jpg: needs descriptions', NULL, 'louise_brooks', 'fashion17_450.jpg', '2011-06-13 21:17:31.144614', '2011-06-13 21:17:31.144614')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('film_journale_450.jpg', 2, 'film_journale_450.jpg: needs descriptions', NULL, 'louise_brooks', 'film_journale_450.jpg', '2011-06-13 21:17:31.146669', '2011-06-13 21:17:31.146669')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('Filmiaitta21-1929_450.jpg', 2, 'Filmiaitta21-1929_450.jpg: needs descriptions', NULL, 'louise_brooks', 'Filmiaitta21-1929_450.jpg', '2011-06-13 21:17:31.148887', '2011-06-13 21:17:31.148887')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('filmjournal1-27_450.jpg', 2, 'filmjournal1-27_450.jpg: needs descriptions', NULL, 'louise_brooks', 'filmjournal1-27_450.jpg', '2011-06-13 21:17:31.151742', '2011-06-13 21:17:31.151742')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('filmtape_450.jpg', 2, 'filmtape_450.jpg: needs descriptions', NULL, 'louise_brooks', 'filmtape_450.jpg', '2011-06-13 21:17:31.154388', '2011-06-13 21:17:31.154388')
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('german01_450.jpg', 2, 'german01_450.jpg: needs descriptions', NULL, 'louise_brooks', 'german01_450.jpg', '2011-06-13 21:17:31.156758', '2011-06-13 21:17:31.156758')[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('german02_450.jpg', 2, 'german02_450.jpg: needs descriptions', NULL, 'louise_brooks', 'german02_450.jpg', '2011-06-13 21:17:31.159320', '2011-06-13 21:17:31.159320')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('german03_450.jpg', 2, 'german03_450.jpg: needs descriptions', NULL, 'louise_brooks', 'german03_450.jpg', '2011-06-13 21:17:31.178543', '2011-06-13 21:17:31.178543')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('german04_450.jpg', 2, 'german04_450.jpg: needs descriptions', NULL, 'louise_brooks', 'german04_450.jpg', '2011-06-13 21:17:31.180716', '2011-06-13 21:17:31.180716')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('german08_450.jpg', 2, 'german08_450.jpg: needs descriptions', NULL, 'louise_brooks', 'german08_450.jpg', '2011-06-13 21:17:31.183241', '2011-06-13 21:17:31.183241')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('japan_450.jpg', 2, 'japan_450.jpg: needs descriptions', NULL, 'louise_brooks', 'japan_450.jpg', '2011-06-13 21:17:31.185612', '2011-06-13 21:17:31.185612')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('jazzbaby03_450.jpg', 2, 'jazzbaby03_450.jpg: needs descriptions', NULL, 'louise_brooks', 'jazzbaby03_450.jpg', '2011-06-13 21:17:31.187923', '2011-06-13 21:17:31.187923')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('jazzbaby15_450.jpg', 2, 'jazzbaby15_450.jpg: needs descriptions', NULL, 'louise_brooks', 'jazzbaby15_450.jpg', '2011-06-13 21:17:31.191608', '2011-06-13 21:17:31.191608')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('jazzbaby16_450.jpg', 2, 'jazzbaby16_450.jpg: needs descriptions', NULL, 'louise_brooks', 'jazzbaby16_450.jpg', '2011-06-13 21:17:31.193911', '2011-06-13 21:17:31.193911')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('jazzbaby17_450.jpg', 2, 'jazzbaby17_450.jpg: needs descriptions', NULL, 'louise_brooks', 'jazzbaby17_450.jpg', '2011-06-13 21:17:31.196374', '2011-06-13 21:17:31.196374')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('jazzbaby18_450.jpg', 2, 'jazzbaby18_450.jpg: needs descriptions', NULL, 'louise_brooks', 'jazzbaby18_450.jpg', '2011-06-13 21:17:31.198625', '2011-06-13 21:17:31.198625')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('jazzbaby19_450.jpg', 2, 'jazzbaby19_450.jpg: needs descriptions', NULL, 'louise_brooks', 'jazzbaby19_450.jpg', '2011-06-13 21:17:31.202273', '2011-06-13 21:17:31.202273')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('jazzbaby20_450.jpg', 2, 'jazzbaby20_450.jpg: needs descriptions', NULL, 'louise_brooks', 'jazzbaby20_450.jpg', '2011-06-13 21:17:31.205140', '2011-06-13 21:17:31.205140')[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('kimono03_450.jpg', 2, 'kimono03_450.jpg: needs descriptions', NULL, 'louise_brooks', 'kimono03_450.jpg', '2011-06-13 21:17:31.207761', '2011-06-13 21:17:31.207761')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('koala_450.jpg', 2, 'koala_450.jpg: needs descriptions', NULL, 'louise_brooks', 'koala_450.jpg', '2011-06-13 21:17:31.210162', '2011-06-13 21:17:31.210162')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('lapel01_450.jpg', 2, 'lapel01_450.jpg: needs descriptions', NULL, 'louise_brooks', 'lapel01_450.jpg', '2011-06-13 21:17:31.212495', '2011-06-13 21:17:31.212495')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('lapel02_450.jpg', 2, 'lapel02_450.jpg: needs descriptions', NULL, 'louise_brooks', 'lapel02_450.jpg', '2011-06-13 21:17:31.214566', '2011-06-13 21:17:31.214566')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('lapel03a_450.jpg', 2, 'lapel03a_450.jpg: needs descriptions', NULL, 'louise_brooks', 'lapel03a_450.jpg', '2011-06-13 21:17:31.216980', '2011-06-13 21:17:31.216980')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('louise01_450.jpg', 2, 'louise01_450.jpg: needs descriptions', NULL, 'louise_brooks', 'louise01_450.jpg', '2011-06-13 21:17:31.219365', '2011-06-13 21:17:31.219365')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('louise_back_450.jpg', 2, 'louise_back_450.jpg: needs descriptions', NULL, 'louise_brooks', 'louise_back_450.jpg', '2011-06-13 21:17:31.221924', '2011-06-13 21:17:31.221924')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('louisebrooks_450.jpg', 2, 'louisebrooks_450.jpg: needs descriptions', NULL, 'louise_brooks', 'louisebrooks_450.jpg', '2011-06-13 21:17:31.224960', '2011-06-13 21:17:31.224960')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('pearls01_450.jpg', 2, 'pearls01_450.jpg: needs descriptions', NULL, 'louise_brooks', 'pearls01_450.jpg', '2011-06-13 21:17:31.227303', '2011-06-13 21:17:31.227303')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('pearls02_353x450.jpg', 2, 'pearls02_353x450.jpg: needs descriptions', NULL, 'louise_brooks', 'pearls02_353x450.jpg', '2011-06-13 21:17:31.229645', '2011-06-13 21:17:31.229645')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('portrait07_450.jpg', 2, 'portrait07_450.jpg: needs descriptions', NULL, 'louise_brooks', 'portrait07_450.jpg', '2011-06-13 21:17:31.232039', '2011-06-13 21:17:31.232039')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('resque10_450.jpg', 2, 'resque10_450.jpg: needs descriptions', NULL, 'louise_brooks', 'resque10_450.jpg', '2011-06-13 21:17:31.234588', '2011-06-13 21:17:31.234588')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('richee01_450.jpg', 2, 'richee01_450.jpg: needs descriptions', NULL, 'louise_brooks', 'richee01_450.jpg', '2011-06-13 21:17:31.237023', '2011-06-13 21:17:31.237023')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('richee02_450.jpg', 2, 'richee02_450.jpg: needs descriptions', NULL, 'louise_brooks', 'richee02_450.jpg', '2011-06-13 21:17:31.239490', '2011-06-13 21:17:31.239490')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('richee03_450.jpg', 2, 'richee03_450.jpg: needs descriptions', NULL, 'louise_brooks', 'richee03_450.jpg', '2011-06-13 21:17:31.242032', '2011-06-13 21:17:31.242032')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('richee04_450.jpg', 2, 'richee04_450.jpg: needs descriptions', NULL, 'louise_brooks', 'richee04_450.jpg', '2011-06-13 21:17:31.244903', '2011-06-13 21:17:31.244903')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('richee05_450.jpg', 2, 'richee05_450.jpg: needs descriptions', NULL, 'louise_brooks', 'richee05_450.jpg', '2011-06-13 21:17:31.247204', '2011-06-13 21:17:31.247204')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('richee08_450.jpg', 2, 'richee08_450.jpg: needs descriptions', NULL, 'louise_brooks', 'richee08_450.jpg', '2011-06-13 21:17:31.249427', '2011-06-13 21:17:31.249427')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('richee09_450.jpg', 2, 'richee09_450.jpg: needs descriptions', NULL, 'louise_brooks', 'richee09_450.jpg', '2011-06-13 21:17:31.251854', '2011-06-13 21:17:31.251854')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('richee10_450.jpg', 2, 'richee10_450.jpg: needs descriptions', NULL, 'louise_brooks', 'richee10_450.jpg', '2011-06-13 21:17:31.254483', '2011-06-13 21:17:31.254483')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('richee11_450.jpg', 2, 'richee11_450.jpg: needs descriptions', NULL, 'louise_brooks', 'richee11_450.jpg', '2011-06-13 21:17:31.256716', '2011-06-13 21:17:31.256716')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('richee12_450.jpg', 2, 'richee12_450.jpg: needs descriptions', NULL, 'louise_brooks', 'richee12_450.jpg', '2011-06-13 21:17:31.258897', '2011-06-13 21:17:31.258897')[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('ring01_450.jpg', 2, 'ring01_450.jpg: needs descriptions', NULL, 'louise_brooks', 'ring01_450.jpg', '2011-06-13 21:17:31.260869', '2011-06-13 21:17:31.260869')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('ring02_450.jpg', 2, 'ring02_450.jpg: needs descriptions', NULL, 'louise_brooks', 'ring02_450.jpg', '2011-06-13 21:17:31.263829', '2011-06-13 21:17:31.263829')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('ring04_450.jpg', 2, 'ring04_450.jpg: needs descriptions', NULL, 'louise_brooks', 'ring04_450.jpg', '2011-06-13 21:17:31.266236', '2011-06-13 21:17:31.266236')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('risque06_450.jpg', 2, 'risque06_450.jpg: needs descriptions', NULL, 'louise_brooks', 'risque06_450.jpg', '2011-06-13 21:17:31.268935', '2011-06-13 21:17:31.268935')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('sailor_450.jpg', 2, 'sailor_450.jpg: needs descriptions', NULL, 'louise_brooks', 'sailor_450.jpg', '2011-06-13 21:17:31.271912', '2011-06-13 21:17:31.271912')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('signed_450.jpg', 2, 'signed_450.jpg: needs descriptions', NULL, 'louise_brooks', 'signed_450.jpg', '2011-06-13 21:17:31.274253', '2011-06-13 21:17:31.274253')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('smiling_450.jpg', 2, 'smiling_450.jpg: needs descriptions', NULL, 'louise_brooks', 'smiling_450.jpg', '2011-06-13 21:17:31.276449', '2011-06-13 21:17:31.276449')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('staircase_450.jpg', 2, 'staircase_450.jpg: needs descriptions', NULL, 'louise_brooks', 'staircase_450.jpg', '2011-06-13 21:17:31.278713', '2011-06-13 21:17:31.278713')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('sultry_450.jpg', 2, 'sultry_450.jpg: needs descriptions', NULL, 'louise_brooks', 'sultry_450.jpg', '2011-06-13 21:17:31.281062', '2011-06-13 21:17:31.281062')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('themovie82_450.jpg', 2, 'themovie82_450.jpg: needs descriptions', NULL, 'louise_brooks', 'themovie82_450.jpg', '2011-06-13 21:17:31.283611', '2011-06-13 21:17:31.283611')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('thirties03_369x450.jpg', 2, 'thirties03_369x450.jpg: needs descriptions', NULL, 'louise_brooks', 'thirties03_369x450.jpg', '2011-06-13 21:17:31.286024', '2011-06-13 21:17:31.286024')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('thirties05_450.jpg', 2, 'thirties05_450.jpg: needs descriptions', NULL, 'louise_brooks', 'thirties05_450.jpg', '2011-06-13 21:17:31.288202', '2011-06-13 21:17:31.288202')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('thirties10_450.jpg', 2, 'thirties10_450.jpg: needs descriptions', NULL, 'louise_brooks', 'thirties10_450.jpg', '2011-06-13 21:17:31.290839', '2011-06-13 21:17:31.290839')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('thirties12_450.jpg', 2, 'thirties12_450.jpg: needs descriptions', NULL, 'louise_brooks', 'thirties12_450.jpg', '2011-06-13 21:17:31.293346', '2011-06-13 21:17:31.293346')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('timeout1-90_450.jpg', 2, 'timeout1-90_450.jpg: needs descriptions', NULL, 'louise_brooks', 'timeout1-90_450.jpg', '2011-06-13 21:17:31.295609', '2011-06-13 21:17:31.295609')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('towncrier_450.jpg', 2, 'towncrier_450.jpg: needs descriptions', NULL, 'louise_brooks', 'towncrier_450.jpg', '2011-06-13 21:17:31.297695', '2011-06-13 21:17:31.297695')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('tux03_450.jpg', 2, 'tux03_450.jpg: needs descriptions', NULL, 'louise_brooks', 'tux03_450.jpg', '2011-06-13 21:17:31.300524', '2011-06-13 21:17:31.300524')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('tux04_450.jpg', 2, 'tux04_450.jpg: needs descriptions', NULL, 'louise_brooks', 'tux04_450.jpg', '2011-06-13 21:17:31.303126', '2011-06-13 21:17:31.303126')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('vanityfair_450.jpg', 2, 'vanityfair_450.jpg: needs descriptions', NULL, 'louise_brooks', 'vanityfair_450.jpg', '2011-06-13 21:17:31.305498', '2011-06-13 21:17:31.305498')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('whizbang_450.jpg', 2, 'whizbang_450.jpg: needs descriptions', NULL, 'louise_brooks', 'whizbang_450.jpg', '2011-06-13 21:17:31.308098', '2011-06-13 21:17:31.308098')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "photos" ("title", "album_id", "description", "photographer", "image_path", "image_name", "created_at", "updated_at") VALUES ('withdog_450.jpg', 2, 'withdog_450.jpg: needs descriptions', NULL, 'louise_brooks', 'withdog_450.jpg', '2011-06-13 21:17:31.310701', '2011-06-13 21:17:31.310701')
+
+
+Started GET "/" for 127.0.0.1 at 2011-06-13 14:18:04 -0700
+  Processing by AlbumsController#index as HTML
+  [1m[35mAlbum Load (0.6ms)[0m  SELECT "albums".* FROM "albums"
+  [1m[36mPhoto Load (38.8ms)[0m  [1mSELECT "photos".* FROM "photos"[0m
+  [1m[35mPhoto Load (6.6ms)[0m  SELECT "photos".* FROM "photos" WHERE ("photos".album_id = 1)
+  [1m[36mPhoto Load (14.1ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE ("photos".album_id = 2)[0m
+Rendered photos/_photo.html.erb (36.0ms)
+Rendered albums/index.html.erb within layouts/application (106.4ms)
+Completed 200 OK in 166ms (Views: 89.1ms | ActiveRecord: 60.1ms)

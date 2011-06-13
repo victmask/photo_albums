@@ -1,0 +1,23 @@
+<div id="container">
+  <h1>All Albums</h1>
+
+  <div class="albums">
+  <table>
+    <tr>
+  <% @albums.each do |album| %>
+
+      <td><%= link_to image_tag(album.photos[0].image_path + '/thumbs/' + album.photos[0].title), album %>
+      <%= link_to album.title, album  %></td>
+  <% end %>
+    </tr>
+      </table>
+  </div>
+<hr size="5" color="#d3d3d3"><br />
+
+  <%= will_paginate @photos %><br />
+
+  <div class="pagination">
+      <%= render :partial => @photos %>
+  </div>
+</div><br />
+
