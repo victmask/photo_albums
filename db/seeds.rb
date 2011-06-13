@@ -8,7 +8,7 @@
 
 # Modify this to reflect your ENV
 #    s_dir = '/Users/victmask/RoR/photo_album/public/images/'
-    s_dir = RAILS_ROOT + '/public/images/'
+    s_dir = Dir.pwd + '/public/images/'
     # Get the names of all files in the source directory
     albums = Dir.entries(s_dir)
 
